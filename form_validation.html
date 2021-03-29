@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Form Validation</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+
+  <script src="form_validation.js"></script>
+  <!-- <style id="compiled-css" type="text/css">
+    :root {
+      --input-padding-x: 1.5rem;
+      --input-padding-y: 0.75rem;
+    }
+
+    .login,
+    .image {
+      min-height: 40vh;
+    }
+
+    .bg-image {
+      background-image: url('https://source.unsplash.com/WEQbe2jBg40/600x1200');
+      background-size: cover;
+      background-position: center;
+    }
+
+   
+  </style>
+
+  <script id="insert"></script> -->
+
+</head>
+<style>
+  body {
+    background-image: url("https://i.dlpng.com/static/png/6530876_preview.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .round {
+    border-radius: 0px 50px 50px 0px;
+  }
+  .roundif {
+    border-radius: 0px 50px 50px 0px;
+  }
+  .img {
+    height: 500px;
+    width: 800px;
+    margin-left: 20px;
+    border-radius: 50px 0px 0px 50px;
+  }
+</style>
+
+<body>
+  <div class="container mt-5 round ">
+    <div class="row">
+      <div class="col-sm ">
+        <img src="pic.png" alt="..." class="img-thumbnail img ">
+      </div>
+      <div class="col-sm  roundif" style="background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%); ">
+        <div class="text-center mt-5">
+          <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+        </div>
+        <form class="user " action="#">
+          <div class="form-group row">
+            <div class="col-sm-6 mb-3 mb-sm-0 ">
+              <input type="text" class="form-control form-control-user name" id="inputfirst" autofocus
+                placeholder="First Name" style="border-radius: 20px 20px;">
+            </div>
+            <div class="col-sm-6">
+              <input type="text" class="form-control form-control-user radius lname" id="inputLast" autofocus
+                placeholder="Last Name" style="border-radius: 20px 20px;">
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control form-control-user email" id="Email" placeholder="Email Address "
+              style="border-radius: 20px 20px;">
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <input type="password" class="form-control form-control-user password" id="inputPass password"
+                placeholder="Password" style="border-radius: 20px 20px;">
+            </div>
+            <div class="col-sm-6">
+              <input type="password" class="form-control form-control-user rpassword" id="repeatinputPass password"
+                placeholder="Repeat Password" style="border-radius: 20px 20px;">
+            </div>
+            <div class="col-sm-6 mb-3 mb-sm-0 mt-2">
+              <p class="mb-2">Birth Date</p>
+              <input type="date" class="form-control form-control-user birth" id="exampleFirstName"
+                placeholder="Birthdate" style="border-radius: 20px 20px;">
+            </div>
+            <div class="col-sm-6 mt-2 ">
+              <p class="mb-2">Phone Number</p>
+              <input type="integer" class="form-control form-control-user pNumber" id="exampleLastName"
+                placeholder="Phone Number PH" style="border-radius: 20px 20px;">
+            </div>
+          </div>
+          <button id="signInBtn" data-toggle="modal" data-target="#errors"
+            class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="button"
+            style="border-radius: 20px 20px;">Register Account</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="errors" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-danger">
+          <h5 class="modal-title text-light">Oops</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="error"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal" id="btnClosePopup"
+            onclick="close()">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
